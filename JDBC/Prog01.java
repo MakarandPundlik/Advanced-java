@@ -1,0 +1,44 @@
+import java.sql.*;
+
+class Prog01
+{
+	public static void main(String[] args)
+	{
+		//every database program should start with try cluase because the program throws checked exceptions
+		try
+		{
+			Class.forName("com.mysql.jdbc.Driver");
+			String connectionString = "jdbc:mysql://localhost:3306/compnay_info";
+			String userName = "root";
+			String password = "1234";
+			Connection conn = DriverManager.getConnection(connectionString,userName,password);
+			
+			Statement stmt = conn.createStatement();
+			
+			String sql = "select * from emp_info";
+			
+			ResultSet rs = stmt.executeQuery(sql);
+			
+			System.out.println("Empid\tName\tSurname\tCity\tSalary");
+			
+			while(rs.next())
+			{
+				System.out.println(rs.getInt(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t"+rs.getDouble(5));
+				//close the objects in reverse order
+				rs.close();
+				stmt.close();
+				conn.close();
+			}
+		}
+		
+		catch(SQLException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		catch(ClassNotFoundException e)
+		{
+			System.out.println(e.getMessage());
+			
+		}
+	}
+}

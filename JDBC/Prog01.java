@@ -7,8 +7,8 @@ class Prog01
 		//every database program should start with try cluase because the program throws checked exceptions
 		try
 		{
-			Class.forName("com.mysql.jdbc.Driver");
-			String connectionString = "jdbc:mysql://localhost:3306/compnay_info";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String connectionString = "jdbc:mysql://localhost:3306/company_info";
 			String userName = "root";
 			String password = "1234";
 			Connection conn = DriverManager.getConnection(connectionString,userName,password);
@@ -19,16 +19,17 @@ class Prog01
 			
 			ResultSet rs = stmt.executeQuery(sql);
 			
-			System.out.println("Empid\tName\tSurname\tCity\tSalary");
+			System.out.println("Empid\t\tName\t\tSurname\t\tCity\t\tSalary");
 			
 			while(rs.next())
 			{
-				System.out.println(rs.getInt(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t"+rs.getDouble(5));
+				System.out.println(rs.getInt(1)+"\t\t"+rs.getString(2)+"\t\t"+rs.getString(3)+"\t\t"+rs.getString(4)+"\t\t"+rs.getDouble(5));
 				//close the objects in reverse order
-				rs.close();
+				
+			}
+			rs.close();
 				stmt.close();
 				conn.close();
-			}
 		}
 		
 		catch(SQLException e)
@@ -38,7 +39,6 @@ class Prog01
 		catch(ClassNotFoundException e)
 		{
 			System.out.println(e.getMessage());
-			
 		}
 	}
 }

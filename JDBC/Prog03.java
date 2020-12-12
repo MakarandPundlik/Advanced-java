@@ -26,20 +26,21 @@ class Prog03
 			
 			int cntr = 0;
 			boolean flag =false;
-			if(rs.next())
+			/*if(rs.next())
 			{
 				
 				System.out.println("Empid\tName\tSurname\tCity\tSalary");
 				System.out.println(rs.getInt(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t"+rs.getDouble(5));
 				cntr++;
 				flag=true;
-			}
+			}*/
 			while(rs.next())
 			{
-				flag = true;
-				
+				if(!flag)
+				System.out.println("Empid\tName\tSurname\tCity\tSalary");
 				System.out.println(rs.getInt(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t"+rs.getDouble(5));
 				cntr++;
+				flag = true;
 			}
 			if(!flag)
 			System.out.println("no records found for "+cname+" city");

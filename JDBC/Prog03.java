@@ -37,10 +37,14 @@ class Prog03
 			while(rs.next())
 			{
 				if(!flag)
-				System.out.println("Empid\tName\tSurname\tCity\tSalary");
+				{
+					System.out.println("Empid\tName\tSurname\tCity\tSalary");
+					flag=true;
+				}
+				
 				System.out.println(rs.getInt(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t"+rs.getDouble(5));
 				cntr++;
-				flag = true;
+				
 			}
 			if(!flag)
 			System.out.println("no records found for "+cname+" city");

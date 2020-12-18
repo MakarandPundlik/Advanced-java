@@ -30,7 +30,7 @@ class Prog06
 			int cntr = stmt.executeUpdate(sql);
 			
 			if(cntr!=0)
-			System.out.println("Delete operation successful, "+cntr+" rows affected");
+			System.out.println("Update operation successful, "+cntr+" rows affected");
 			
 			else
 			System.out.println("No record for "+ old_cname+ " city is registered");

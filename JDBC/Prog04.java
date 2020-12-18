@@ -40,7 +40,7 @@ class Prog04
 			*/
 			//String sql = insert into emp_info (1,"ramesh","powar","pune",121212);
 '			
-			String sql = "insert into emp_info values(" + empid + ",'" + name + "','" + surname + "','" + city + "'," + sal + ")";
+			String sql = " insert into emp_info values(" + empid + " , ' " + name + " ' , ' " + surname + " ' , ' " + city + " ' , " + sal + " ) ";
 			int cntr = stmt.executeUpdate(sql);
 			
 			if(cntr!=0)

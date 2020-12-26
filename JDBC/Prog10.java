@@ -84,13 +84,13 @@
 		//register each button with event
 		
 		btnnext.addActionListener(this);
-		/*btnprev.addActionListener(this);
+		btnprev.addActionListener(this);
 		btnfirst.addActionListener(this);
 		btnlast.addActionListener(this);
 		btnnew.addActionListener(this);
 		btnsave.addActionListener(this);
 		btnupdate.addActionListener(this);
-		btndelete.addActionListener(this);*/
+		/*btndelete.addActionListener(this);*/
 		
 		//to connect to the database write a method ,
 		//the process can be written here also , but it is always better to separate presentation logic from business logic
@@ -163,7 +163,7 @@
 				if(rs.isLast())
 				JOptionPane.showMessageDialog(this,"Already at last record","Customer Records",JOptionPane.INFORMATION_MESSAGE);
 				
-				//1 - posotion of dialog box
+				//1 - posotion of dialog box , this - at the centre of frame , null - centre of screen
 				//2 - message to be displayed
 				//3 - title
 				//4 - icons to be shown
@@ -173,6 +173,62 @@
 					rs.next();
 					showRec();
 				}
+			}
+			
+			else if(ae.getSource()==btnprev)
+			{
+				if(rs.isFirst())
+				JOptionPane.showMessageDialog(this,"Already at first record","Customer Records",JOptionPane.INFORMATION_MESSAGE);
+				
+				else
+				{
+					rs.previous();
+					showRec();
+				}
+			}
+			
+			else if(ae.getSource()==btnfirst)
+			{
+				rs.first();
+				showRec();
+			}
+			
+			else if(ae.getSource()==btnlast)
+			{
+				rs.last();
+				showRec();
+			}
+			
+			else if(ae.getSource()==btnnew)
+			{
+				txtcid.setText("");
+				txtfn.setText("");
+			}
+			
+			else if(ae.getSource()==btnsave)
+			{
+				//append the blank roq at the end of rs
+				rs.moveToInsertRow();
+				
+				//update the contents of blank row using the data from textfield
+				//1 st field in rs is an int whose value is to be updated 
+				rs.updateInt(1,Integer.parseInt(txtcid.getText()));
+				rs.updateString(2,txtfn.getText());
+				
+				//transfer the data from rs to mysql dB
+				
+				rs.insertRow(); //this will auto run insert query
+				
+				JOptionPane.showMessageDialog(this,"Record has been inserted","Customer records",JOptionPane.INFORMATION_MESSAGE);
+			}
+			else if(ae.getSource()==btnupdate)
+			{
+				//update the record on the screen
+				rs.updateInt(1,Integer.parseInt(txtcid.getText()));
+				rs.updateString(2,txtfn.getText());
+				
+				rs.updateRow();
+				JOptionPane.showMessageDialog(this,"Record has been updated","Customer records",JOptionPane.INFORMATION_MESSAGE);
 			}
 		}
 		catch(Exception e)

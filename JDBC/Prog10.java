@@ -131,7 +131,7 @@
 		}
 		catch(Exception e)
 		{
-			System.out.println(e.getMessage());
+			JOptionPane.showMessageDialog(this,e.getMessage(),"Customer records",JOptionPane.INFORMATION_MESSAGE);
 		}
 	}//end of getConn()
 	
@@ -148,7 +148,7 @@
 		}
 		catch(Exception e)
 		{
-			System.out.println(e.getMessage());
+			JOptionPane.showMessageDialog(this,e.getMessage(),"Customer records",JOptionPane.INFORMATION_MESSAGE);
 		}
 	}//end of showRec();
 	
@@ -233,7 +233,7 @@
 		}
 		catch(Exception e)
 		{
-			System.out.println(e.getMessage());
+			JOptionPane.showMessageDialog(this,e.getMessage(),"Customer records",JOptionPane.INFORMATION_MESSAGE);
 		}
 	}
  }

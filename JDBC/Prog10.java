@@ -90,7 +90,7 @@
 		btnnew.addActionListener(this);
 		btnsave.addActionListener(this);
 		btnupdate.addActionListener(this);
-		/*btndelete.addActionListener(this);*/
+		btndelete.addActionListener(this);
 		
 		//to connect to the database write a method ,
 		//the process can be written here also , but it is always better to separate presentation logic from business logic
@@ -229,6 +229,44 @@
 				
 				rs.updateRow();
 				JOptionPane.showMessageDialog(this,"Record has been updated","Customer records",JOptionPane.INFORMATION_MESSAGE);
+			}
+			
+			//delete button
+			else
+			{
+				//get confirmation from the user before proceeding with deletetion of record
+				
+				int response = JOptionPane.showConfirmDialog(this,"Are you sure you want to deelete this record?","Question Message",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
+				
+				if(response == JOptionPane.NO_OPTION)
+				return; //terminate the deletion process
+				
+				//check which record is active 
+				//if ot is last record then show the previous otherwise shoe next record
+				
+				boolean flag = false;
+				if(rs.isLast())
+				flag=true; //last record is active
+
+				rs.deleteRow();
+				JOptionPane.showMessageDialog(this,"Record has been deleted successfully","Delete information",JOptionPane.INFORMATION_MESSAGE);
+				
+				//refresh the gui with earlier or next record
+				
+				if(flag)
+				rs.previous();
+				
+				else
+				{
+					rs.next();
+					rs.previous();
+					
+					//after deleting a record 
+					//the next record takes its place
+					//but its not refreshed hence to refresh we neeed to move between records
+					//rs.refreshRow(); //mysql does not support this
+				}
+				showRec();
 			}
 		}
 		catch(Exception e)

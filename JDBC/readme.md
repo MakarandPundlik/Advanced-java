@@ -11,6 +11,8 @@
 |[Prog08.java](Prog08.java)     |Example 2 on PreparedStatement |
 |[Prog09.java](Prog09.java)     |Example of GUI with JDBC |
 |[Prog10.java](Prog10.java)     |Example  of java swings |
-|[Prog11.java](Prog11.java)     |Example 1 of MySql pstored procedures |
-|[Prog12.java](Prog12.java)     |Example 2 of MySql pstored procedures |
-|[Prog13.java](Prog13.java)     |Example 3 of MySql pstored procedures |
+|[Prog11.java](Prog11.java)     |Example 1 of MySql stored procedures |
+|[Prog12.java](Prog12.java)     |Example 2 of MySql stored procedures |
+|[Prog13.java](Prog13.java)     |Example 3 of MySql stored procedures |
+|[Prog14.java](Prog14.java)     |Example 1 of MySql DatabaseMetaData |
+|[Prog15.java](Prog15.java)     |Example 2 of MySql ResultSetMetaData |

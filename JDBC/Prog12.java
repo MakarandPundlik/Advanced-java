@@ -18,11 +18,12 @@ class Prog12
 			
 			Connection conn = DriverManager.getConnection(url,username,password);
 			
-			CallableStatement cstmt = conn.prepareCall("changeadata(?,?,?)");
+			CallableStatement cstmt = conn.prepareCall("call changedata(?,?,?)");
 			
 			//set values for parameters 
 			cstmt.setInt(1,cid);
 			cstmt.setString(2,fn);
+			
 			
 			/*while working with mysql procedures we may have to execute different types*
 			of queries like insert,updates,delete,select etc.
@@ -35,18 +36,19 @@ class Prog12
 			
 			int nor = cstmt.getInt(3); //nor will contain the records affected by query 
 			
-			if(nor !=0)
-			System.out.println("record with custid "+cid+" has been updated");
-			
-			else
+			if(nor ==0)
 			System.out.println("record with custid "+cid+" not found");
 			
-			ResultSet rs = cstmt.getResultSet();
+			else
+			System.out.println("record with custid "+cid+" has been updated");
+			
+			
+			
 			
 			//display the column headings first
 			
 			System.out.println("Cid\tFullname");
-			
+			ResultSet rs = cstmt.getResultSet();
 			while(rs.next())
 			System.out.println(rs.getInt(1)+"\t"+rs.getString(2));
 			

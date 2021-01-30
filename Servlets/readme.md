@@ -4,3 +4,4 @@ Programs | Description
 [Prog02.java](Prog02.java) | A servlet that receives data od dropdown and process it
 [Prog03.java](Prog03.java) | A servlet that accepts multiple values sent by html form 
 [Prog04a.java](Prog04a.java) | Example 1 on shopping cart
+[Prog04b.java](Prog04b.java) | Example 2 on shopping cart

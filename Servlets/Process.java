@@ -41,7 +41,7 @@ public class Process extends HttpServlet
 				HttpSession s = req.getSession(true);
 				//key-object pair
 				s.setAttribute("username",un);
-				s.setAttribute("balance",new Double(rs.getDouble(2)));
+				s.setAttribute("balance",new Double(rs.getDouble(3)));
 				
 				//got to welcome page
 				res.sendRedirect("Wel"); //Wel is url pattern for welcome page

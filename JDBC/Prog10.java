@@ -105,7 +105,7 @@
 		{
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			String url = "jdbc:mysql://localhost:3306/company_info";
+			String url = "jdbc:mysql://localhost:3306/company_info?autoReconnect=true&useSSL=false";
 			String un = "root";
 			String pass = "1234";
 			conn = DriverManager.getConnection(url,un,pass);

@@ -16,7 +16,7 @@ class Prog05
 		{
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			String url = "jdbc:mysql://localhost:3306/company_info";
+			String url = "jdbc:mysql://localhost:3306/company_info?autoReconnect=true&useSSL=false";
 			String username = "root";
 			String password = "1234";
 			Connection conn = DriverManager.getConnection(url,username,password);

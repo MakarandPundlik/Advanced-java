@@ -20,9 +20,10 @@ public class Process extends HttpServlet
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
+			String url = "jdbc:mysql://localhost:3306/company_info";
 			String username = "root";
 			String password = "1234";
-			String url = "jdbc:mysql://localhost:3306/company_info";
+			
 			Connection conn = DriverManager.getConnection(url,username,password);
 			
 			//create sql query

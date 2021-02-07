@@ -16,3 +16,7 @@
 |[Prog13.java](Prog13.java)     |Example 3 of MySql stored procedures |
 |[Prog14.java](Prog14.java)     |Example 1 of MySql DatabaseMetaData |
 |[Prog15.java](Prog15.java)     |Example 2 of MySql ResultSetMetaData |
+
+
+### All driver paths are modified to com.mysql.jdbc.Driver
+### All database urls are modified to jdbc:mysql://localhost:3306/<dbname>?autoReconnect=true&useSSL=false

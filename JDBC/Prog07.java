@@ -13,7 +13,7 @@ class Prog07
 			int no = Integer.parseInt(args[0]);
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			String url = "jdbc:mysql://localhost:3306/company_info";
+			String url = "jdbc:mysql://localhost:3306/company_info?autoReconnect=true&useSSL=false";
 			String username = "root";
 			String password = "1234";
 			

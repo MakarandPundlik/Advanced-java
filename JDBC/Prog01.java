@@ -8,7 +8,7 @@ class Prog01
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			String connectionString = "jdbc:mysql://localhost:3306/company_info";
+			String connectionString = "jdbc:mysql://localhost:3306/company_info?autoReconnect=true&useSSL=false";
 			String userName = "root";
 			String password = "1234";
 			Connection conn = DriverManager.getConnection(connectionString,userName,password);

@@ -9,7 +9,7 @@ class Prog14
 		{
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			String url = "jdbc:mysql://localhost/company_info";
+			String url = "jdbc:mysql://localhost/company_info?autoReconnect=true&useSSL=false";
 			String username = "root";
 			String password = "1234";
 			Connection conn = DriverManager.getConnection(url,username,password);

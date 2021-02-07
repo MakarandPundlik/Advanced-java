@@ -19,7 +19,7 @@ public class Process extends HttpServlet
 		
 		try
 		{
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			String username = "root";
 			String password = "1234";
 			String url = "jdbc:mysql://localhost:3306/company_info";

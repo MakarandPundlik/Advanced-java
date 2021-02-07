@@ -7,7 +7,7 @@ class Prog01
 		//every database program should start with try cluase because the program throws checked exceptions
 		try
 		{
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			String connectionString = "jdbc:mysql://localhost:3306/company_info";
 			String userName = "root";
 			String password = "1234";

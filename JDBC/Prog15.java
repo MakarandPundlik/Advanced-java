@@ -10,7 +10,7 @@ class Prog15
 		try
 		{
 			String table_name = args[0];
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			String url = "jdbc:mysql://localhost/company_info";
 			String username = "root";
 			String password = "1234";

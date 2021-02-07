@@ -76,7 +76,7 @@ class Prog09 extends Frame implements ActionListener
 				//login vuttin clicked , access the table user and 
 			//check if username and passwords are correct
 			
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			String url = "jdbc:mysql://localhost:3306/company_info";
 			String username = "root";
 			String pass = "1234";

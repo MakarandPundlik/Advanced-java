@@ -11,7 +11,7 @@ class Prog07
 		try
 		{
 			int no = Integer.parseInt(args[0]);
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			
 			String url = "jdbc:mysql://localhost:3306/company_info";
 			String username = "root";

@@ -10,7 +10,7 @@ class Prog12
 		{
 			int cid = Integer.parseInt(args[0]);
 			String fn = args[1];
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			
 			String url = "jdbc:mysql://localhost:3306/company_info";
 			String username = "root";

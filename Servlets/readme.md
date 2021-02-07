@@ -10,4 +10,4 @@ Programs | Description
 
 
 ### Probles occurred
-#### -[x] Tomcat requires MySQL driver file n=in its lib folder to access database through server.
+- [x] Tomcat requires MySQL driver file in its lib folder to access database through server.

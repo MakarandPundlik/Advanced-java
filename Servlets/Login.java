@@ -47,5 +47,6 @@ public class Login extends HttpServlet
 		pw.println("<input type='submit' value='Login'/>");
 		pw.println("</form></body></html>");
 		
+		pw.close();
 	}
 }

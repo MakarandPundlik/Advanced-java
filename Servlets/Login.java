@@ -38,10 +38,10 @@ public class Login extends HttpServlet
 		//design the login page form
 		pw.println("<form action='WC' method='POST'>");
 		pw.println("Username:-");
-		pw.println("<input type='textfield' name='un'/><p>");
+		pw.println("<input type='textfield' name='un' value='"+ un +"'/><p>");
 		
 		pw.println("Password:-");
-		pw.println("<input type='password' name='pwd'/><p>");
+		pw.println("<input type='password' name='pwd'  value='"+ pwd +"'/><p>");
 		
 		pw.println("<input type='checkbox' value='on' name='rem'>Remember Me</input><p>");
 		pw.println("<input type='submit' value='Login'/>");

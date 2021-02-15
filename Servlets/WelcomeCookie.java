@@ -28,7 +28,7 @@ public class WelcomeCookie extends HttpServlet
 			Cookie c2 = new Cookie("pwd",pwd);
 			
 			//important, set expiry dat for cookie
-			//eg we want to cookie to expre after 1hr
+			//eg we want to cookie to expire after 1hr
 			c1.setMaxAge(3600);
 			c2.setMaxAge(3600); //time in seconds
 			
@@ -36,7 +36,7 @@ public class WelcomeCookie extends HttpServlet
 			res.addCookie(c1);
 			res.addCookie(c2);
 		}
-		pw.println("Welcome "+un+" tp our website");
+		pw.println("Welcome "+un+" to our website");
 		pw.println("</body></html>");
 		
 		pw.close();

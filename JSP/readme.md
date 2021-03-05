@@ -15,3 +15,5 @@ Program | description
 [Header.jsp](Header.jsp) | How to pass parameters in JSP
 [Prog08a.jsp](Prog08a.jsp) | Example of links
 [Prog08b.jsp](Prog08b.jsp) | Example of links
+[CDs.jsp](CDs.jsp) | Example on Shopping Cart
+[Toys.jsp](Toys.jsp) | Example on Shopping Cart

@@ -31,7 +31,7 @@ class Thirteen implements Runnable
 	{
 		System.out.println("Start of Thirteen thread");
 		for(int i=1;i<=10;i++)
-			System.out.println("7x"+i+" = "+13*i);
+			System.out.println("13x"+i+" = "+13*i);
 			
 		System.out.println("End of Thirteen thread");	
 	}

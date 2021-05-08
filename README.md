@@ -1,4 +1,4 @@
-# Advance-Java
+# Advanced-Java
 ## Topics 
 ### [1.JDBC](JDBC)
 ### [2.Servlets](Servlets)
